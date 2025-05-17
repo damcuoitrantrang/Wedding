@@ -83,23 +83,23 @@ body {
 .couple-info {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  text-align: center;
+  margin-top: 1rem;
 }
 
+
 .person {
-  flex: 1 1 48%;
+  flex: 1 1 46%;
   background: #fffef9;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .person img {
   width: 100%;
-  max-width: 180px;
+  max-width: 120px;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
@@ -228,7 +228,7 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   /* semi-transparent white */
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
