@@ -78,6 +78,67 @@ body {
   color: #5d4037;
 }
 
+
+/* Add information chu rẻ and cô dâu */
+.couple-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.person {
+  flex: 1 1 48%;
+  background: #fffef9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.person img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.person h3 {
+  color: #c2185b;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.person .role {
+  font-weight: bold;
+}
+
+.person p {
+  font-size: 0.95rem;
+  margin: 0.2rem 0;
+  color: #333;
+}
+
+/* Stack on small devices */
+@media (max-width: 600px) {
+  .couple-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
 /* Add information wedding */
 
 .wedding-timeline {
