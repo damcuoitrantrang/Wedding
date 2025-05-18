@@ -110,3 +110,8 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal, .fade-left, .fade-right, .zoom-in, .rotate-in, .bounce-in')
   .forEach(elem => observer.observe(elem));
+
+//  Toggle Info : click chú rể và cô dâu
+function toggleInfo(personDiv) {
+  personDiv.classList.toggle('show-info');
+}

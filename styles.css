@@ -64,7 +64,7 @@ body {
 }
 
 .reveal {
-  flex: 1 1 48%; /* Let each person take half space */
+  flex: 1 1 48%;
 }
 
 .person {
@@ -75,14 +75,38 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.person img {
+.photo-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.photo-hover img {
   width: 100%;
   max-width: 180px;
   height: auto;
-  border-radius: 12px; /* ⬅️ slight round corners, not circular */
+  border-radius: 12px;
   object-fit: cover;
   margin-bottom: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.parent-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 248, 240, 0.95);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: none;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.photo-hover:hover .parent-info {
+  display: block;
 }
 
 .person h3 {
@@ -96,11 +120,11 @@ body {
 }
 
 .person p {
-  font-size: 1rem;
   margin: 0.3rem 0;
+  font-size: 1rem;
 }
 
-/* Responsive: Stack on mobile */
+/* Responsive */
 @media (max-width: 600px) {
   .couple-info {
     flex-direction: column;
@@ -111,9 +135,12 @@ body {
     width: 100%;
   }
 
-  .person img {
-    width: 100px;
-    height: 100px;
+  .photo-hover img {
+    max-width: 140px;
+  }
+
+  .parent-info {
+    font-size: 0.85rem;
   }
 }
 
