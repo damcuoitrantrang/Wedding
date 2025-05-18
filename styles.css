@@ -68,27 +68,32 @@ body {
 }
 
 .person {
-  background: #fffef9;
-  padding: 1rem;
+  padding: 0; /* remove internal space so image touches edges */
   border-radius: 12px;
+  overflow: hidden; /* ensures nothing sticks out of the rounded box */
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .photo-hover {
   position: relative;
-  display: inline-block;
+  width: 100%;
+  display: block;
 }
+
 
 .photo-hover img {
   width: 100%;
-  max-width: 180px;
   height: auto;
-  border-radius: 12px;
+  display: block;
   object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  border-radius: 0;  /* no rounded corners needed here */
+  box-shadow: none;  /* remove inner shadow */
+  margin-bottom: 0;  /* remove space below image */
 }
+
 
 .parent-info {
   position: absolute;
