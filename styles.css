@@ -48,66 +48,47 @@ body {
   color: #6d4c41;
 }
 
-/* .event-detail .label {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #d81b60;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-}
 
-.event-detail .time {
-  font-size: 1.2rem;
-  color: #c2185b;
-}
-
-.event-detail .date {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-}
-
-.event-detail .lunar {
-  font-style: italic;
-  color: #7b1fa2;
-  margin-bottom: 1rem;
-}
-
-.event-detail .location {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: #5d4037;
-} */
 
 
 /* Add information chu rẻ and cô dâu */
 .couple-info {
   display: flex;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.reveal {
+  flex: 1 1 48%; /* Let each person take half space */
+}
 
 .person {
-  flex: 1 1 46%;
   background: #fffef9;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .person img {
   width: 100%;
-  max-width: 120px;
-  border-radius: 8px;
+  max-width: 180px;
+  height: auto;
+  border-radius: 12px; /* ⬅️ slight round corners, not circular */
+  object-fit: cover;
   margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .person h3 {
-  color: #c2185b;
-  font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #d81b60;
 }
 
 .person .role {
@@ -115,24 +96,26 @@ body {
 }
 
 .person p {
-  font-size: 0.95rem;
-  margin: 0.2rem 0;
-  color: #333;
+  font-size: 1rem;
+  margin: 0.3rem 0;
 }
 
-/* Stack on small devices */
+/* Responsive: Stack on mobile */
 @media (max-width: 600px) {
   .couple-info {
     flex-direction: column;
     align-items: center;
   }
 
-  .person {
+  .reveal {
     width: 100%;
-    max-width: 100%;
+  }
+
+  .person img {
+    width: 100px;
+    height: 100px;
   }
 }
-
 
 
 
