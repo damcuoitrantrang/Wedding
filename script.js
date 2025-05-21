@@ -116,3 +116,25 @@ document.querySelectorAll('.reveal, .fade-left, .fade-right, .zoom-in, .rotate-i
 function toggleInfo(personDiv) {
   personDiv.classList.toggle('show-info');
 }
+
+
+//QRCODE
+// popup.classList.add("show"); // when open
+// popup.classList.remove("show"); // when close
+
+document.addEventListener("DOMContentLoaded", function () {
+  const openGift = document.getElementById("openGift");
+  const closeGift = document.getElementById("closeGift");
+  const popup = document.getElementById("giftPopup");
+
+  if (openGift && closeGift && popup) {
+    openGift.addEventListener("click", () => {
+      popup.classList.add("show");
+    });
+
+    closeGift.addEventListener("click", () => {
+      popup.classList.remove("show");
+    });
+  }
+});
+

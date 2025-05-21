@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- ✅ Universal Link Preview for Facebook, Zalo, iMessage, Twitter -->
+<!-- ✅ Universal Link Preview for Facebook, Zalo, iMessage, Twitter
   <meta property="og:type" content="website">
   <meta property="og:title" content="Thiệp cưới Hà Trân & Hải Trang">
   <meta property="og:description" content="Chúng tôi rất hân hạnh mời bạn tới tham dự ngày trọng đại của chúng tôi!">
@@ -14,12 +14,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Thiệp cưới Hà Trân & Hải Trang">
   <meta name="twitter:description" content="Chúng tôi rất hân hạnh mời bạn tới tham dự ngày trọng đại của chúng tôi!">
-  <meta name="twitter:image" content="https://damcuoitrantrang.github.io/Wedding/images/couple.jpg">
+  <meta name="twitter:image" content="https://damcuoitrantrang.github.io/Wedding/images/couple.jpg"> -->
 
 
-  <title>Wedding Invitation</title>
+  <title>HAPPY WEDDING</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
@@ -44,7 +46,8 @@
 
 
   <div class="invitation-card">
-    <h1><strong>Wedding invitation!</strong></h1>
+    <h1><strong>HAPPY WEDDING</strong></h1>
+    <p class="invitation-title">Cảm ơn tất cả những người thân yêu cửa chúng mình trong ngày đặc biệt này</p>
     <img src="images/couple.jpg" alt="Wedding Couple" class="couple-photo" />
     
   <h1 class="invite-heading"><strong>TRÂN TRỌNG KÍNH MỜI</strong></h1>
@@ -54,14 +57,14 @@
     <div class="reveal">
       <h1 class="couple-names">Hà Trân <span class="heart-icon">❤️</span> Hải Trang</h1h1>
     </div>
-    
-    <div class="invitation-text">
-      <div class="reveal rotate-in">
-        <p class="intro">Tới dự <strong>Bữa Cơm Thân Mật</strong> chung vui<br />
-          cùng gia đình chúng tôi</p>
+    <p class="invitation-date">Thứ Bảy, Ngày 07 - 06 - 2025</p>
+    <p class="invitation-time">09:00 AM</p>
 
-        </div>
+    <div class="confirm-invitation">
+      <button class="confirm-button" onclick="confirmInvitation()">Tham Dự</button>
+      <button class="cancel-button" onclick="cancelInvitation()">Mường cưới</button>
     </div>
+
 
     <h2>Giới thiệu cặp đôi đẹp trai xinh gái</h2>
 
@@ -284,30 +287,46 @@
       </div>
     </div>
 
-    <h1>Hộp quà</h1>
+    <h1>Gửi quà đến cô dâu và chú rể</h1>
 
-    <div class="map-container">
-      <div class="reveal fade-left">
-        <div class="person-block">
-          <h3>Hà Trân</h3>
-          <div class="qr-section">
-            <!-- <p>Scan to RSVP:</p> -->
-            <img src="images/qr-code.jpg" alt="QR Code" width="100%" />
-          </div>
-        </div>
-      </div>
+    <div class="gift-section">
+      <img src="images/background.jpg" alt="Gift" class="gift-bg" />
 
-      <div class="reveal fade-right">
-        <div class="person-block">
-          <h3>Hải Trang</h3>
-          <div class="qr-section">
-            <!-- <p>Scan to RSVP:</p> -->
-            <img src="images/qr-code.jpg" alt="QR Code" width="100%" />
-          </div>
-        </div>
-      </div>
+      <div class="gift-overlay-text">GỬI QUÀ ĐẾN<br>CÔ DÂU & CHÚ RỂ</div>
 
+      <button id="openGift" class="gift-button">
+        <i class="fa fa-gift"></i>
+      </button>
     </div>
+
+
+    <div class="popup-overlay" id="giftPopup">
+      <div class="popup-content invitation-card"> <!-- ✅ One content container -->
+        <span class="close-btn" id="closeGift">&times;</span>
+
+        <div class="map-container">
+          <div class="reveal fade-left">
+            <div class="person-block">
+              <h3>Hà Trân</h3>
+              <div class="qr-section">
+                <img src="images/qr-code.jpg" alt="QR Code" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal fade-right">
+            <div class="person-block">
+              <h3>Hải Trang</h3>
+              <div class="qr-section">
+                <img src="images/qr-code.jpg" alt="QR Code" width="100%" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 
      <footer>
       <p><strong>Chân thành cảm ơn mọi người!</strong></p>
