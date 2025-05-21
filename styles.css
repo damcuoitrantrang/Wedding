@@ -398,35 +398,37 @@ body {
   font-size: 1.8rem;
 }
 
-/* 🎁 Popup Styles */
 .popup-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,0.6);
-  display: none;
+  display: none; /* default hidden */
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  overflow-y: auto;
   padding: 1rem;
-}
-
-.popup-content {
-  background: #fffef9;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 600px;
-  width: 90%;
-  position: relative;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform: scale(0.95);
-  opacity: 0;
+  overflow-y: auto;
 }
 
 .popup-overlay.show {
   display: flex;
+}
+
+.popup-content {
+  background: #fffef9;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+  position: relative;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .popup-overlay.show .popup-content {
@@ -435,33 +437,60 @@ body {
 }
 
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
+  position: sticky; /* ✅ Stick to top inside scroll area */
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
   font-size: 1.5rem;
+  font-weight: bold;
   cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  float: right;
 }
 
-/* 📱 Mobile Optimizations */
+/* Optional: Make content look nice inside */
+.qr-block {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.qr-block h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #d81b60;
+}
+
+.qr-section img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive tweaks */
 @media (max-width: 600px) {
-  .gift-overlay-text {
-    font-size: 1.2rem;
-    top: 25%;
-  }
-
-  .gift-button {
-    bottom: 15%;
-    font-size: 1.8rem;
-    padding: 0.8rem;
-  }
-
   .popup-content {
-    padding: 1rem;
     width: 95%;
+    max-height: 90vh;
+    padding: 1rem;
   }
 
   .close-btn {
     font-size: 1.3rem;
+    padding: 0.3rem;
+  }
+
+  .qr-block h3 {
+    font-size: 1rem;
   }
 }
 
@@ -470,7 +499,7 @@ body {
 
 
 
-/* .person-block {
+.person-block {
   font-family: 'Calibri', sans-serif;
   background: #fffef9;
   padding: 1rem;
