@@ -306,6 +306,12 @@
     <script src="script.js"></script>
     <!-- Dont show inspect -->
     <script src="protection.js"></script>
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+
 </body>
 
 </html>
