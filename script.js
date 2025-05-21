@@ -1,3 +1,6 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 // Optional: Click to expand image
 document.querySelectorAll('.gallery img').forEach(img => {
   img.addEventListener('click', () => {
