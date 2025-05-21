@@ -812,3 +812,32 @@ section.visible {
   transition-delay: 0.4s;
 }
 
+/* music button*/
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #d6336c;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 8px rgba(255, 254, 254, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.music-btn img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  background-color:#fff
+}
+
+.music-btn.playing {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

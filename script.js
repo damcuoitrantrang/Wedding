@@ -138,3 +138,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// music button
+document.addEventListener('DOMContentLoaded', function () {
+  const music = document.getElementById('background-music');
+  const toggleBtn = document.getElementById('music-toggle');
+
+  // Chờ người dùng tương tác lần đầu để phát nhạc
+  function startMusic() {
+    music.play().then(() => {
+      toggleBtn.classList.add('playing');
+    }).catch(err => {
+      console.log('Trình duyệt không cho tự động phát nhạc:', err);
+    });
+    document.removeEventListener('click', startMusic);
+  }
+  document.addEventListener('click', startMusic);
+
+  // Bấm nút để bật/tắt
+  toggleBtn.addEventListener('click', function () {
+    if (music.paused) {
+      music.play();
+      toggleBtn.classList.add('playing');
+    } else {
+      music.pause();
+      toggleBtn.classList.remove('playing');
+    }
+  });
+});
+
