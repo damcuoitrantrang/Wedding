@@ -386,17 +386,37 @@ body {
   font-size: 2rem;
   padding: 1rem;
   border: none;
-  border-radius: 50%;
-  background: #fff;
-  color: #d81b60;
+  background: transparent;         /* 🔥 no background */
+  color: #e91e63;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 2;
+  animation: pulseGlow 2s infinite; /* 💫 animated effect */
 }
 
 .gift-button i {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
+
+/* 💡 Pulse animation */
+@keyframes pulseGlow {
+  0% {
+    transform: translateX(-50%) scale(1);
+    text-shadow: 0 0 0px rgba(233, 30, 99, 0.4);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+    text-shadow: 0 0 10px rgba(233, 30, 99, 0.6);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    text-shadow: 0 0 0px rgba(233, 30, 99, 0.4);
+  }
+}
+
+.gift-button:hover {
+  color: #ff4081;
+}
+
 
 .popup-overlay {
   position: fixed;
@@ -491,23 +511,13 @@ body {
 }
 
 .qr-information {
-  margin-top: auto;
-  padding: 1rem;
-  background: #fffef9;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  text-align: center;
 }
 
-.qr-information p {
-  margin: 0.5rem 0;
-  text-align: left;
-}
-
-.qr-information .label {
-  font-weight: bold;
-  color: #333;
-}
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -528,6 +538,9 @@ body {
 
   .qr-section {
     height: 150px;
+  }
+  .qr-information {
+    font-size: 0.9rem;
   }
 }
 
