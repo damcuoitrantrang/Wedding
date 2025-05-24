@@ -136,7 +136,17 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.classList.remove("show");
     });
   }
+      // Close popup when clicking outside the popup content
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        popup.classList.remove("show");
+        document.body.style.overflow = "";
+      }
+    });
 });
+
+
+
 
 // music button
 document.addEventListener('DOMContentLoaded', function () {
@@ -167,10 +177,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
-    popup.classList.remove("show");
-    document.body.style.overflow = "";
-  }
-});
 
