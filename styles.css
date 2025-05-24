@@ -273,14 +273,14 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.timeline-footer {
+/* .timeline-footer {
   margin-top: 2rem;
   font-size: 1.3rem;
   font-style: italic;
   border-top: 1px solid #ccc;
   padding-top: 1rem;
   color: #5a3e36;
-}
+} */
 
 /* Responsive */
 @media (max-width: 600px) {
@@ -781,6 +781,36 @@ section.visible {
     opacity: 0;
   }
 }
+
+
+footer {
+  text-align: center;
+  /* background-color: #fff8f0; */
+  padding: 2rem 1rem;
+  font-family: 'Dancing Script', cursive; /* Romantic font */
+  font-size: 1.5rem;
+  color: #333; /* Deep red */
+  margin-top: 3rem;
+  border-top: 2px dashed #333;
+}
+
+footer strong {
+  font-weight: 700;
+  color: #333;
+}
+
+footer p {
+  white-space: nowrap;      /* 🔒 No line breaks */
+  overflow: hidden;         /* optional: hide overflow */
+  text-overflow: ellipsis;  /* optional: add ... if overflowed */
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 1.2rem;
+  }
+}
+
 
 
 /* Animation Styles */
