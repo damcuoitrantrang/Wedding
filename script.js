@@ -166,3 +166,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+});
+

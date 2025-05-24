@@ -62,7 +62,7 @@
 
     <div class="confirm-invitation">
       <button class="confirm-button" onclick="confirmInvitation()">Tham Dự</button>
-      <button class="cancel-button" onclick="cancelInvitation()">Mường cưới</button>
+      <button class="cancel-button" onclick="cancelInvitation()">Mừng cưới</button>
     </div>
 
 
@@ -258,7 +258,61 @@
       </div>
     </section>
 
-    <h1>Địa chỉ</h1>
+
+<!-- 
+    <h1>Gửi quà đến cô dâu và chú rể</h1> -->
+
+    <div class="gift-section">
+      <img src="images/background.jpg" alt="Gift" class="gift-bg" />
+
+      <div class="gift-overlay-text">GỬI QUÀ ĐẾN<br>CÔ DÂU & CHÚ RỂ</div>
+
+      <button id="openGift" class="gift-button">
+        <i class="fa fa-gift"></i>
+      </button>
+    </div>
+
+
+    <div class="popup-overlay" id="giftPopup">
+      <div class="popup-content invitation-card"> <!-- ✅ One content container -->
+        <span class="close-btn" id="closeGift">&times;</span>
+
+        <div class="map-container">
+          <div class="reveal fade-left">
+            <div class="qr-block">
+              <h3>Hà Trân</h3>
+              <div class="qr-section">
+                <img src="images/qr-Boy.jpg" alt="QR Code" width="100%" />
+              </div>
+                <p>Ngân hàng: BIDV</p>
+                <p>Tên tài khoản: HA VAN TRAN</p>
+                <p>Số tài khoản:8884672117</p>
+                <p>Chi nhánh: CN SO GIAO DICH 1</p>
+            </div>
+          </div>
+
+          <div class="reveal fade-right">
+            <div class="qr-block">
+              <h3>Hải Trang</h3>
+              <div class="qr-section">
+                <img src="images/qr-Girl.jpg" alt="QR Code" width="100%" />
+
+              </div>
+                <p>Ngân hàng: PGBANK</p>
+                <p>Tên tài khoản: TRINH THI HAI TRANG</p>
+                <p>Số tài khoản:333666666999</p>
+                <p>Chi nhánh: CN DONG ANH</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="music-toggle" class="music-btn">
+      <img src="music/musical-notes.jpg" alt="Music Icon" />
+    </div>
+
+        <h1>Địa chỉ</h1>
 
     <div class="map-container">
       <div class="reveal bounce-in"> 
@@ -285,49 +339,6 @@
           </div>
           
       </div>
-    </div>
-<!-- 
-    <h1>Gửi quà đến cô dâu và chú rể</h1> -->
-
-    <div class="gift-section">
-      <img src="images/background.jpg" alt="Gift" class="gift-bg" />
-
-      <div class="gift-overlay-text">GỬI QUÀ ĐẾN<br>CÔ DÂU & CHÚ RỂ</div>
-
-      <button id="openGift" class="gift-button">
-        <i class="fa fa-gift"></i>
-      </button>
-    </div>
-
-
-    <div class="popup-overlay" id="giftPopup">
-      <div class="popup-content invitation-card"> <!-- ✅ One content container -->
-        <span class="close-btn" id="closeGift">&times;</span>
-
-        <div class="map-container">
-          <div class="reveal fade-left">
-            <div class="qr-block">
-              <h3>Hà Trân</h3>
-              <div class="qr-section">
-                <img src="images/qr-code.jpg" alt="QR Code" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="reveal fade-right">
-            <div class="qr-block">
-              <h3>Hải Trang</h3>
-              <div class="qr-section">
-                <img src="images/qr-code.jpg" alt="QR Code" width="100%" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="music-toggle" class="music-btn">
-      <img src="music/musical-notes.jpg" alt="Music Icon" />
     </div>
 
     <!-- Thẻ audio phát nhạc -->
