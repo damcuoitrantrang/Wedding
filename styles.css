@@ -385,12 +385,15 @@ body {
   transform: translateX(-50%);
   font-size: 2rem;
   padding: 1rem;
-  border: none;
-  background: transparent;         /* 🔥 no background */
+  border: 2px solid #e91e63; /* ✅ Bold border */
+  border-radius: 12px;
+  background: transparent;   /* Optional: transparent background */
   color: #e91e63;
   cursor: pointer;
+  font-weight: bold;         /* ✅ Bolder icon if supported */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 2;
-  animation: pulseGlow 2s infinite; /* 💫 animated effect */
+  animation: pulseGlow 2s infinite;
 }
 
 .gift-button i {
