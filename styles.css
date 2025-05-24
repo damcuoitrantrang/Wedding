@@ -785,13 +785,9 @@ section.visible {
 
 footer {
   text-align: center;
-  /* background-color: #fff8f0; */
   padding: 2rem 1rem;
-  font-family: 'Dancing Script', cursive; /* Romantic font */
-  font-size: 1.5rem;
-  color: #333; /* Deep red */
   margin-top: 3rem;
-  border-top: 2px dashed #333;
+  border-top: 2px dashed #f8bbd0;
 }
 
 footer strong {
@@ -799,17 +795,34 @@ footer strong {
   color: #333;
 }
 
-footer p {
-  white-space: nowrap;      /* 🔒 No line breaks */
-  overflow: hidden;         /* optional: hide overflow */
-  text-overflow: ellipsis;  /* optional: add ... if overflowed */
+/* First Line - Thank You */
+footer .thanks-message {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #e91e63;
+  margin-bottom: 0.5rem;
+  white-space: normal;  /* ✅ Allow wrapping */
+}
+
+/* Second Line - Signature */
+footer .signature {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #6d4c41;
+  font-style: normal;
+  white-space: normal;  /* ✅ Allow wrapping */
 }
 
 @media (max-width: 600px) {
-  footer {
-    font-size: 1.2rem;
+  footer .thanks-message {
+    font-size: 1.6rem;
+  }
+
+  footer .signature {
+    font-size: 1rem;
   }
 }
+
 
 
 
