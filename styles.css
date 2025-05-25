@@ -378,7 +378,7 @@ h2 {
   filter: brightness(0.85);
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive adjustments for smaller screens okayokay*/
 @media (max-width: 600px) {
   .gift-bg {
     height: 300px;
