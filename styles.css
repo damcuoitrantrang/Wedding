@@ -10,13 +10,17 @@ body {
 :root {
   --max-width-main: 1100px;
 }
-.invitation-card, .wedding-timeline, .map-container {
+
+.invitation-card,
+.wedding-timeline,
+.map-container {
   max-width: var(--max-width-main);
 }
 
 html {
   font-size: 16px;
 }
+
 @media (max-width: 600px) {
   html {
     font-size: 14px;
@@ -24,18 +28,26 @@ html {
 }
 
 h1 {
-  font-family: 'Dancing Script', cursive; /* Romantic handwritten style */
-  font-size: clamp(1.8rem, 5vw, 2.8rem);  /* Responsive font size */
-  color: #333;                         /* Sweet pink tone */
+  font-family: 'Dancing Script', cursive;
+  /* Romantic handwritten style */
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  /* Responsive font size */
+  color: #333;
+  /* Sweet pink tone */
   text-align: center;
   line-height: 1.3;
   margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* soft depth */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* soft depth */
 }
+
 h2 {
-  font-family: 'Roboto', sans-serif; /* Clean sans-serif for readability */
-  font-size: clamp(1.5rem, 4vw, 2.2rem); /* Responsive font size */
-  color: #333; /* Romantic pink */
+  font-family: 'Roboto', sans-serif;
+  /* Clean sans-serif for readability */
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  /* Responsive font size */
+  color: #333;
+  /* Romantic pink */
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -53,7 +65,8 @@ h2 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 1rem 0 2rem;
-  color: #d81b60; /* Romantic pink */
+  color: #d81b60;
+  /* Romantic pink */
 }
 
 .heart-icon {
@@ -61,8 +74,15 @@ h2 {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.3); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
 }
 
 
@@ -107,23 +127,24 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Default: wider photo on desktop */
 .photo-hover {
   position: relative;
   width: 100%;
-  max-width: 200px;
+  max-width: 320px; /* ⬅️ Increase this for desktop */
   margin: 0 auto;
   display: block;
   box-sizing: border-box;
 }
 
+/* Optional: add aspect ratio for consistent size */
 .photo-hover img {
   width: 100%;
   height: auto;
-  display: block;
   object-fit: cover;
-  border-radius: 0;
-  box-shadow: none;
+  display: block;
   margin-bottom: 0;
+  border-radius: 12px;
 }
 
 .parent-info {
@@ -169,11 +190,12 @@ h2 {
   font-weight: bold;
   color: #d81b60;
 }
-}
+
 
 .parent-info h3,
 .parent-info p {
-  font-size: clamp(0.6rem, 1.5vw, 1rem); /* ⬅️ More compact, mobile-friendly */
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  /* ⬅️ More compact, mobile-friendly */
   margin: 0.2rem 0;
   line-height: 1.2;
 }
@@ -265,11 +287,13 @@ h2 {
 .person-pair {
   display: flex;
   align-items: center;
-  gap: 1rem; /* increased spacing for larger elements */
+  gap: 1rem;
+  /* increased spacing for larger elements */
 }
 
 .person-pair img {
-  width: 100px;     /* original was 20px–40px, now 5x = ~100px */
+  width: 100px;
+  /* original was 20px–40px, now 5x = ~100px */
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
@@ -331,7 +355,8 @@ h2 {
   .person-pair {
     flex-direction: column;
   }
-    .person-pair img {
+
+  .person-pair img {
     width: 80px;
     height: 80px;
   }
@@ -354,13 +379,15 @@ h2 {
   /* max-width: 1100px; From 600px ➜ 1100px */
   margin: 2rem auto;
   /* background-color: #fff; */
-  background-color: rgba(255, 255, 255, 0.5); /* 50% opaque */
+  background-color: rgba(255, 255, 255, 0.5);
+  /* 50% opaque */
   /* semi-transparent white */
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: visible; /* make sure child elements aren't clipped */
+  overflow: visible;
+  /* make sure child elements aren't clipped */
 }
 
 @media (min-width: 768px) {
@@ -388,7 +415,7 @@ h2 {
 
 .gift-bg {
   width: 100%;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
@@ -425,13 +452,16 @@ h2 {
   transform: translateX(-50%);
   font-size: 2rem;
   padding: 1rem;
-  border: 2px solid #e91e63; /* ✅ Bold border */
+  border: 2px solid #e91e63;
+  /* ✅ Bold border */
   border-radius: 12px;
-  background: transparent;   /* Optional: transparent background */
+  background: transparent;
+  /* Optional: transparent background */
   color: #e91e63;
   cursor: pointer;
-  font-weight: bold;         /* ✅ Bolder icon if supported */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-weight: bold;
+  /* ✅ Bolder icon if supported */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 2;
   animation: pulseGlow 2s infinite;
 }
@@ -446,10 +476,12 @@ h2 {
     transform: translateX(-50%) scale(1);
     text-shadow: 0 0 0px rgba(233, 30, 99, 0.4);
   }
+
   50% {
     transform: translateX(-50%) scale(1.1);
     text-shadow: 0 0 10px rgba(233, 30, 99, 0.6);
   }
+
   100% {
     transform: translateX(-50%) scale(1);
     text-shadow: 0 0 0px rgba(233, 30, 99, 0.4);
@@ -463,10 +495,11 @@ h2 {
 
 .popup-overlay {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
   align-items: center;
@@ -529,7 +562,7 @@ h2 {
   background: #fff;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -586,10 +619,12 @@ h2 {
   .qr-section {
     height: 150px;
   }
+
   .qr-information {
     font-size: 0.9rem;
   }
 }
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .qr-container {
@@ -615,7 +650,8 @@ h2 {
   max-width: 1100px;
   width: 100%;
   box-sizing: border-box;
-  background-color: transparent; /* Soft background */
+  background-color: transparent;
+  /* Soft background */
 }
 
 .person-block {
@@ -638,37 +674,17 @@ h2 {
 }
 
 .address-information {
-  margin-top: 1rem;
   font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-  text-align: left;
+  text-align: center;
+  word-break: break-word;
+  hyphens: auto;
 }
 
-@media (max-width: 768px) {
-  .map-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    position: static;
-  }
-  .person-block {
-    flex: 1 1 100%;
-    width: 100%;
-    padding: 1.5rem;
-  }
-  .person-block iframe {
-    height: 260px;
-  }
+@media (max-width: 400px) {
   .address-information {
-    font-size: 1.05rem;
-    text-align: center;
+    font-size: 0.95rem;
   }
 }
-
-
 
 @media (max-width: 768px) {
   .map-container {
@@ -689,23 +705,20 @@ h2 {
   .person-block iframe {
     height: 260px;
   }
-
-  .address-information {
-    font-size: 1.05rem;
-    text-align: center;
-  }
 }
+
 
 
 
 .invite-heading {
-  font-family: 'Dancing Script', cursive; /* Or a formal Google font */
+  font-family: 'Dancing Script', cursive;
+  /* Or a formal Google font */
   font-size: 2rem;
   color: #d81b60;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 0.5rem 0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -875,7 +888,8 @@ section.visible {
 /* Heart Animation */
 .love-background {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
@@ -896,9 +910,11 @@ section.visible {
     transform: translateY(100vh) scale(0.6);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(-10vh) scale(1.2);
     opacity: 0;
@@ -915,22 +931,26 @@ footer {
 
 /* All footer lines */
 footer p {
-  white-space: nowrap;         /* ❌ Prevents line breaks */
-  overflow: hidden;            /* ⛔ Prevents spillover */
+  white-space: nowrap;
+  /* ❌ Prevents line breaks */
+  overflow: hidden;
+  /* ⛔ Prevents spillover */
   margin: 0.5rem 0;
 }
 
 /* First line - Thank you */
 footer .thanks-message {
   font-family: 'Dancing Script', cursive;
-  font-size: clamp(1.2rem, 4vw, 2rem);  /* ✅ Autoscale */
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  /* ✅ Autoscale */
   color: #333;
 }
 
 /* Second line - Signature */
 footer .signature {
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(1rem, 3.5vw, 1.4rem); /* ✅ Autoscale */
+  font-size: clamp(1rem, 3.5vw, 1.4rem);
+  /* ✅ Autoscale */
   color: #333;
   font-style: normal;
 }
@@ -997,6 +1017,7 @@ footer .signature {
   opacity: 1;
   transform: scale(1);
 }
+
 /* Rotate In */
 .rotate-in {
   opacity: 0;
@@ -1022,14 +1043,23 @@ footer .signature {
 }
 
 @keyframes bounce {
-  0%   { transform: translateY(60px); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(60px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .reveal:nth-child(2) {
   transition-delay: 0.2s;
 }
+
 .reveal:nth-child(3) {
   transition-delay: 0.4s;
 }
@@ -1047,11 +1077,13 @@ footer .signature {
   box-shadow: 0 4px 8px rgba(255, 254, 254, 0.2);
   transition: transform 0.3s ease;
 }
+
 .music-btn {
   bottom: 10px;
   left: 10px;
   transition: opacity 0.3s ease;
 }
+
 .music-btn:hover {
   opacity: 0.9;
 }
@@ -1060,7 +1092,7 @@ footer .signature {
   width: 30px;
   height: 30px;
   filter: invert(1);
-  background-color:#fff
+  background-color: #fff
 }
 
 .music-btn.playing {
@@ -1068,7 +1100,11 @@ footer .signature {
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+  0% {
+    transform: rotate(0deg);
+  }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
