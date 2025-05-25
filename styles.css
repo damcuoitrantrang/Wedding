@@ -584,7 +584,13 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-
+.address-information {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  text-align: center;
+}
 /* Responsive: show side-by-side only if space allows */
 @media (min-width: 640px) {
   .map-container {
@@ -594,6 +600,9 @@ h2 {
 
   .person-block {
     flex: 1 1 45%;
+  }
+  .address-information {
+    font-size: 0.9rem;
   }
 } */
 
