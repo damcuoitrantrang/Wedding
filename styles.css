@@ -62,10 +62,11 @@ h2 {
 }
 
 .couple-names {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin: 1rem 0 2rem;
-  color: #d81b60;
+  color: #333;
+   font-family: 'Arial', sans-serif;
   /* Romantic pink */
 }
 
@@ -313,7 +314,8 @@ h2 {
   font-size: 1.5rem;
   color: #e91e63;
   font-weight: bold;
-  margin-bottom: 0.3rem;
+    text-align: left; /* Align text to the left */
+  /* margin-bottom: 0rem; */
 }
 
 .event-time {
@@ -323,10 +325,11 @@ h2 {
 }
 
 .event-note {
-  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
   font-size: 0.95rem;
-  color: #888;
-  margin-bottom: 0.5rem;
+  color: #333;
+  margin-bottom: 0rem;
 }
 
 /* .timeline-footer {
