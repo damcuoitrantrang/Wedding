@@ -33,9 +33,9 @@ window.addEventListener("scroll", () => {
 });
 
 
-let currentGroup = 0;
 
 document.querySelectorAll('.gallery-wrap').forEach(galleryWrap => {
+  let currentGroup = 0; // scoped inside loop ✅
   const gallery = galleryWrap.querySelector('.gallery');
   const images = gallery.querySelectorAll('img');
   const imagesPerView = 3;
@@ -76,8 +76,8 @@ function closeSplash(person) {
 // Heart Animation background
 const heartContainer = document.querySelector('.love-background');
 const heartEmojis = ['💖','💗','💘','💝','💕','💞','💓','💟','❤️','❣️'];
-
-for (let i = 0; i < 30; i++) {
+const heartCount = window.innerWidth < 600 ? 15 : 30;
+for (let i = 0; i < heartCount; i++) {
   const heart = document.createElement('span');
   heart.innerText = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
 
