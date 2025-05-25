@@ -378,6 +378,13 @@ h2 {
   filter: brightness(0.85);
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .gift-bg {
+    height: 300px;
+  }
+}
+
 .gift-overlay-text {
   position: absolute;
   top: 20%;
