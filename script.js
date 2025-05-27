@@ -95,6 +95,10 @@ for (let i = 0; i < heartCount; i++) {
 }
 
 
+function confirmInvitation() {
+  window.open("https://forms.gle/CdNnfKX8vxPh6ycdA", "_blank");
+}
+
 function cancelInvitation() {
   const giftSection = document.getElementById("gift");
   if (giftSection) {
