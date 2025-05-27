@@ -95,6 +95,14 @@ for (let i = 0; i < heartCount; i++) {
 }
 
 
+function cancelInvitation() {
+  const giftSection = document.getElementById("gift");
+  if (giftSection) {
+    giftSection.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+
 // Scroll Animation
 // Animation Style
 const observer = new IntersectionObserver((entries) => {
